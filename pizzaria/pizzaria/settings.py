@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'customers',
     'productss',
-    'purchase_orders'
+    'purchase_orders',
+    'orders_mongo',
+    'deliveries_mongo'
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
