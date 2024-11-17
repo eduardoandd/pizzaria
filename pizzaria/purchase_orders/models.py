@@ -1,17 +1,14 @@
 from django.db import models
-from bson.objectid import ObjectId
-from djongo import models
-from productss.models import Product
 
 class PurchaseOrder(models.Model):
     OrderId = models.AutoField(primary_key=True)
-    Products = models.ArrayReferenceField(
-        to=Product,
-        on_delete=models.CASCADE
-    )
-    TotalPrice = models.DecimalField(max_digits=10, decimal_places=2)
-    
-    
-    
+    Products = models.JSONField()
+
+    def totalPrice(self):
+        """ Calcular o preço total dos produtos na lista. """
+        
+        if not isinstance(self.Products,list):
+            return 0
+        return sum(product.get('price',0) for product in self.Products)
     
     

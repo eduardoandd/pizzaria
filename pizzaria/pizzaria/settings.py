@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'customers',
-    'productss'
+    'productss',
     'purchase_orders'
 ]
 

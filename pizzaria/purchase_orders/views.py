@@ -5,8 +5,8 @@ from purchase_orders.serializers import PurchaseOrderSerializer
 
 class PurchaseOrderCreateListView(generics.ListCreateAPIView):
     queryset = PurchaseOrder.objects.all()
-    serializer_class = PurchaseOrderSerializer
-    
-class PurchaseOrderUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = PurchaseOrder.objects.all()
-    serializer_class = PurchaseOrderSerializer
+    serializer_class=PurchaseOrderSerializer
+
+class PurchaseOrderRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset =PurchaseOrder.objects.all()
+    serializer_class=PurchaseOrderSerializer
