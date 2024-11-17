@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'customers',
-    'productss',
-    'purchase_orders',
+    'products_mongo',
     'orders_mongo',
     'deliveries_mongo'
 ]
