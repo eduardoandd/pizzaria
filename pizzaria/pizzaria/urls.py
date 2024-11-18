@@ -3,8 +3,8 @@ from django.urls import path
 from customers.views import CustomersCreateListView,CustomersRetrieveUpdateDestroyView
 from orders_mongo.views import OrderMongoCreateListView,OrderMongoRetrieveUpdateDestroyView
 from deliveries_mongo.views import DeliveryMongoCreateListView,DeliveryMongoRetrieveUpdateDestroyView
-
 from products_mongo.views import ProductMongoCreateListView, ProductMongoRetrieveUpdateDestroyView
+from sales.views import SalesView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -20,6 +20,9 @@ urlpatterns = [
     
     path('delivery/', DeliveryMongoCreateListView.as_view(), name = 'delivery_create_list'),
     path('delivery/<int:pk>', DeliveryMongoRetrieveUpdateDestroyView.as_view(), name = 'delivery_detail_view'),
+    
+    path('sales/', SalesView.as_view(), name = 'sales_list'),
+    
     
     
 ]
