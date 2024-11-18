@@ -5,6 +5,9 @@ from orders_mongo.views import OrderMongoCreateListView,OrderMongoRetrieveUpdate
 from deliveries_mongo.views import DeliveryMongoCreateListView,DeliveryMongoRetrieveUpdateDestroyView
 from products_mongo.views import ProductMongoCreateListView, ProductMongoRetrieveUpdateDestroyView
 from sales.views import SalesView
+from stock.views import StockCreateListView,StockRetrieveUpdateDestroyView
+
+from employees.views import EmployeesCreateListView,EmployeesRetrieveUpdateDestroyView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -20,6 +23,12 @@ urlpatterns = [
     
     path('delivery/', DeliveryMongoCreateListView.as_view(), name = 'delivery_create_list'),
     path('delivery/<int:pk>', DeliveryMongoRetrieveUpdateDestroyView.as_view(), name = 'delivery_detail_view'),
+    
+    path('stock/', StockCreateListView.as_view(), name = 'stock_create_list'),
+    path('stock/<int:pk>', StockRetrieveUpdateDestroyView.as_view(), name = 'stock_detail_view'),
+    
+    path('employees/', EmployeesCreateListView.as_view(), name = 'employees_create_list'),
+    path('employees/<int:pk>', EmployeesRetrieveUpdateDestroyView.as_view(), name = 'employees_detail_view'),
     
     path('sales/', SalesView.as_view(), name = 'sales_list'),
     

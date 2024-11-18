@@ -10,4 +10,4 @@ class SalesMongoSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def get_order_count(self, obj):
-        return OrderMongo.objects.count()  # Corrigido
+        return OrderMongo.objects.count()  

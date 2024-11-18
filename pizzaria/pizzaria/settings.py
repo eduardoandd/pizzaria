@@ -45,7 +45,9 @@ INSTALLED_APPS = [
     'products_mongo',
     'orders_mongo',
     'deliveries_mongo',
-    'sales'
+    'sales',
+    'stock',
+    'employees'
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
